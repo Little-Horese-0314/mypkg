@@ -1,27 +1,44 @@
+#!/usr/bin/env python3
+
 import rclpy
 from rclpy.node import Node
 from person_msgs.srv import Query
 
 
-def cb(request, response):
-    if request.name == "名前":
-        response.age = 19
-    else:
-        response.age = 200
+class PositionServer(Node):
+    def __init__(self):
+        super().__init__('position_server')
 
-    return response
+        self.x = 0
+        self.y = 0
+
+        self.create_service(Query, 'move', self.callback)
+        self.get_logger().info('Position server started.')
+
+    def callback(self, request, response):
+        cmd = request.command.lower()
+
+        if cmd == 'up':
+            self.y += 1
+        elif cmd == 'down':
+            self.y -= 1
+        elif cmd == 'right':
+            self.x += 1
+        elif cmd == 'left':
+            self.x -= 1
+        elif cmd == 'reset':
+            self.x = 0
+            self.y = 0
+
+        response.x = self.x
+        response.y = self.y
+
+        self.get_logger().info(f'x={self.x}, y={self.y}')
+        return response
 
 
 def main():
     rclpy.init()
-    node = Node("talker")
-
-    node.create_service(Query, "query", cb)
+    node = PositionServer()
     rclpy.spin(node)
-
-    node.destroy_node()
     rclpy.shutdown()
-
-
-if __name__ == "__main__":
-    main()
