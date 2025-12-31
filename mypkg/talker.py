@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+# SPDX-FileCopyrightText: 2025/12/31 Koma Tsutsumi
 import rclpy
 from rclpy.node import Node
 from person_msgs.srv import Query
