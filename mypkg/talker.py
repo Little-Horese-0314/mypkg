@@ -2,8 +2,6 @@ import rclpy
 from rclpy.node import Node
 from person_msgs.srv import Query
 
-rclpy.init()
-node = Node("talker")
 
 def cb(request, response):
     if request.name == "名前":
@@ -13,7 +11,17 @@ def cb(request, response):
 
     return response
 
+
 def main():
-    srv = node.create_service(Query, "query", cb)
+    rclpy.init()
+    node = Node("talker")
+
+    node.create_service(Query, "query", cb)
     rclpy.spin(node)
 
+    node.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == "__main__":
+    main()

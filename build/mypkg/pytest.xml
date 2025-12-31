@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="1" tests="3" time="0.211" timestamp="2025-12-31T11:44:56.277000" hostname="LAPTOP-850DDP0I"><testcase classname="mypkg.test.test_copyright" name="test_copyright" time="0.000"><skipped type="pytest.skip" message="No copyright header has been placed in the generated source file.">/home/koma/ros2_ws/src/mypkg/test/test_copyright.py:20: No copyright header has been placed in the generated source file.</skipped></testcase><testcase classname="mypkg.test.test_flake8" name="test_flake8" time="0.081"><failure message="AssertionError: Found 3 code style errors / warnings:&#10;  ./launch/talk_listen.launch.py:17:1: W391 blank line at end of file&#10;  ./mypkg/listener.py:37:1: W391 blank line at end of file&#10;  ./mypkg/talker.py:29:1: W391 blank line at end of file&#10;assert 1 == 0">test/test_flake8.py:23: in test_flake8
+    assert rc == 0, \
+E   AssertionError: Found 3 code style errors / warnings:
+E     ./launch/talk_listen.launch.py:17:1: W391 blank line at end of file
+E     ./mypkg/listener.py:37:1: W391 blank line at end of file
+E     ./mypkg/talker.py:29:1: W391 blank line at end of file
+E   assert 1 == 0</failure></testcase><testcase classname="mypkg.test.test_pep257" name="test_pep257" time="0.013" /></testsuite></testsuites>

@@ -1,0 +1,66 @@
+[0.165s] Invoking command in '/home/koma/ros2_ws/src/mypkg': CONDA_PROMPT_MODIFIER=(base) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/koma/ros2_ws/src/mypkg/build/mypkg/pytest.xml --junit-prefix=mypkg -o cache_dir=/home/koma/ros2_ws/src/mypkg/build/mypkg/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
+[0.502s] [1m============================= test session starts ==============================[0m
+[0.502s] platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+[0.504s] cachedir: build/mypkg/.pytest_cache
+[0.505s] rootdir: /home/koma/ros2_ws/src/mypkg
+[0.505s] plugins: ament-xmllint-0.12.14, ament-lint-0.12.14, launch-testing-ros-0.19.12, launch-testing-1.0.11, ament-pep257-0.12.14, ament-flake8-0.12.14, ament-copyright-0.12.14, colcon-core-0.20.1, cov-3.0.0
+[0.598s] [1mcollecting ... [0m[1m
+[0.598s] collected 3 items                                                              [0m
+[0.599s] 
+[0.602s] test/test_copyright.py [33ms[0m[32m                                                 [ 33%][0m
+[0.698s] test/test_flake8.py [31mF[0m[31m                                                    [ 66%][0m
+[0.712s] test/test_pep257.py [32m.[0m[31m                                                    [100%][0m
+[0.712s] 
+[0.712s] =================================== FAILURES ===================================
+[0.712s] [31m[1m_________________________________ test_flake8 __________________________________[0m
+[0.712s] [1m[31mtest/test_flake8.py[0m:23: in test_flake8
+[0.754s]     [94massert[39;49;00m rc == [94m0[39;49;00m, \
+[0.754s] [1m[31mE   AssertionError: Found 3 code style errors / warnings:[0m
+[0.754s] [1m[31mE     ./launch/talk_listen.launch.py:17:1: W391 blank line at end of file[0m
+[0.754s] [1m[31mE     ./mypkg/listener.py:37:1: W391 blank line at end of file[0m
+[0.754s] [1m[31mE     ./mypkg/talker.py:29:1: W391 blank line at end of file[0m
+[0.754s] [1m[31mE   assert 1 == 0[0m
+[0.755s] ----------------------------- Captured stdout call -----------------------------
+[0.755s] 
+[0.755s] ./launch/talk_listen.launch.py:17:1: W391 blank line at end of file
+[0.755s] 
+[0.755s] ^
+[0.755s] 
+[0.755s] ./mypkg/listener.py:37:1: W391 blank line at end of file
+[0.755s] 
+[0.755s] ^
+[0.755s] 
+[0.755s] ./mypkg/talker.py:29:1: W391 blank line at end of file
+[0.755s] 
+[0.755s] ^
+[0.755s] 
+[0.755s] 3     W391 blank line at end of file
+[0.755s] 
+[0.755s] 8 files checked
+[0.755s] 3 errors
+[0.755s] 
+[0.755s] 'W'-type errors: 3
+[0.755s] 
+[0.755s] Checked files:
+[0.755s] 
+[0.755s] * ./setup.py
+[0.755s] * ./launch/talk_listen.launch.py
+[0.755s] * ./mypkg/listener.py
+[0.755s] * ./mypkg/talker.py
+[0.755s] * ./mypkg/__init__.py
+[0.755s] * ./test/test_pep257.py
+[0.755s] * ./test/test_copyright.py
+[0.755s] * ./test/test_flake8.py
+[0.755s] ----------------------------- Captured stderr call -----------------------------
+[0.755s] option --max-complexity: please update from optparse string `type=` to argparse callable `type=` -- this will be an error in the future
+[0.755s] --- generated xml file: /home/koma/ros2_ws/src/mypkg/build/mypkg/pytest.xml ----
+[0.755s] =========================== short test summary info ============================
+[0.755s] FAILED test/test_flake8.py::test_flake8 - AssertionError: Found 3 code style ...
+[0.755s] [33m=============================== warnings summary ===============================[0m
+[0.756s] test/test_flake8.py::test_flake8
+[0.756s] test/test_flake8.py::test_flake8
+[0.756s]   Warning: SelectableGroups dict interface is deprecated. Use select.
+[0.756s] 
+[0.756s] -- Docs: https://docs.pytest.org/en/stable/warnings.html
+[0.756s] [31m============== [31m[1m1 failed[0m, [32m1 passed[0m, [33m1 skipped[0m, [33m2 warnings[0m[31m in 0.25s[0m[31m ==============[0m
+[0.797s] Invoked command in '/home/koma/ros2_ws/src/mypkg' returned '1': CONDA_PROMPT_MODIFIER=(base) PYTEST_ADDOPTS=--tb=short --junit-xml=/home/koma/ros2_ws/src/mypkg/build/mypkg/pytest.xml --junit-prefix=mypkg -o cache_dir=/home/koma/ros2_ws/src/mypkg/build/mypkg/.pytest_cache PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m pytest
