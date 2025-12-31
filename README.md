@@ -19,16 +19,15 @@
 - reset --- x=0, y=0
 
 # 使用方法
-- ノードの起動
+- ノードの起動  
  ros2 run mypkg talker
 
-- サービス呼び出し例
+- サービス呼び出し例  
  ros2 service call /move person_msgs/srv/Query "{command: 'up'}"
 
-- 出力例
-
- x: 1 
- y: 2
+- 出力例  
+ x: 1  
+ y: 2  
 
 # 著作権
 - Copyright (c) 2025/12/31 Koma Tsutsumi
