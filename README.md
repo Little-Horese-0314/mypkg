@@ -1,5 +1,5 @@
 # XY平面座標物体の位置シミュレーション
-![test](https://github.com/Little-Horese-0314/mypkg/blob/main/.github/workflows/test.yml)
+![test](https://github.com/Little-Horese-0314/mypkg/actions/runs/20618423641/job/59215523805)
 
 ## 概要
 - このパッケージは、2次元平面上の座標 (x, y) を操作する ROS 2 パッケージ である。
